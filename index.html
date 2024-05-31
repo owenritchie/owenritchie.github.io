@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owen Ritchie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Owen Ritchie</h1>
+        <div class="section">
+            <h2>Experience</h2>
+            <ul>
+                <li>Data Analytics Intern at Poisson Consulting (2023)</li>
+                <li>Teaching Assistant at Columbia Mountains Institute of Applied Ecology (2023)</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Education</h2>
+            <ul>
+                <li>Honours Bachelor of Science with Major in Computer Science (2022-Current)</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Resume</h2>
+            <a id="download-resume" href="OwenRitchieResume2024.pdf" target="_blank">Download Resume</a>
+        </div>
+        <div class="section" id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><a class="project-link" href="https://owenritchie1.pythonanywhere.com/">Oceania Consumption Predictor</a> - A tool to predict future seafood consumption in Oceania</li>
+                <li><a class="project-link" href="https://projectlink2.com">Project Two</a> - An app for monitoring daily activities.</li>
+            </ul>
+        </div>
+        <div class="section" id="contact">
+            <h2>Get in Touch!</h2>
+            <button onclick="window.location.href='mailto:owenritchie04@gmail.com'">Send Email</button>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        function addOverlayEffect(linkElement) {
+            linkElement.addEventListener("click", function(event) {
+                event.preventDefault();
+                const overlay = document.getElementById("overlay");
+                overlay.style.display = "block";
+                overlay.style.animation = "washOver 1s forwards";
+                const targetHref = linkElement.href;
+                setTimeout(function() {
+                    window.location.href = targetHref;
+                }, 1000);
+            });
+        }
+
+        document.querySelectorAll(".project-link").forEach(addOverlayEffect);
+
+        const resumeLink = document.getElementById("download-resume");
+        addOverlayEffect(resumeLink);
+    </script>
+</body>
+</html>
