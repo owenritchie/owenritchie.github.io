@@ -1,7 +1,7 @@
 body {
-    font-family: 'Courier New', monospace;
-    background: #282c34;
-    color: #abb2bf;
+    font-family: 'Victor Mono', monospace;
+    background: #000; 
+    color: #fff; 
     padding: 20px;
     margin: 0;
     display: flex;
@@ -18,8 +18,21 @@ body {
 }
 
 h1 {
-    color: #61dafb;
+    color: #fff; 
+    font-family: 'Vollkorn', serif;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
     animation: slideInFromTop 1s ease-in-out, fadeIn 1s ease-in-out;
+}
+
+h2 {
+    color: #fff;
+    font-family: 'Vollkorn', serif;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 ul {
@@ -28,36 +41,69 @@ ul {
 }
 
 ul li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.workplace-icon {
+    width: 40px; 
+    height: 40px; 
+    margin-right: 12px;
+    object-fit: cover;
+    opacity: 0.95;
+    border-radius: 5%;
+    vertical-align: middle;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 a {
-    color: #61dafb;
+    color: #fff; 
     text-decoration: none;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, opacity 0.3s ease;
 }
 
 a:hover {
-    text-decoration: underline;
-    color: #98c379;
+    opacity: 0.7; 
+    text-decoration: none;
 }
 
 .section {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 button {
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    background: #61dafb;
-    color: #282c34;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1); 
+    color: #fff;
     cursor: pointer;
+    font-family: 'Victor Mono', monospace;
+    font-weight: 500;
     transition: background 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 button:hover {
-    background: #98c379;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#download-resume {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#download-resume:hover {
+    background: rgba(255, 255, 255, 0.15);
+    text-decoration: none;
 }
 
 @keyframes fadeIn {
@@ -80,7 +126,6 @@ button:hover {
     }
 }
 
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -88,19 +133,29 @@ button:hover {
 }
 
 .grid-item {
-    background: #3a3f47;
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 24px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
 .grid-item:hover {
-    transform: translateY(-10px);
+    
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+.grid-item:hover .project-image {
+    transform: scale(1.03);
+    opacity: 1;
 }
 
 .project-content {
@@ -117,30 +172,130 @@ button:hover {
 
 .project-description {
     flex-grow: 1;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7); 
 }
 
 .project-image {
     width: 100%;
     height: auto;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 6px;
     margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 h3 {
-    color: #61dafb;
-    margin: 0 0 10px;
+    color: #fff; 
+    margin: 0 0 12px;
+    font-family: 'Vollkorn', serif;
+    transition: transform 0.3s ease;
 }
 
 .tech-stack {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
 }
 
 .tech {
-    background: #61dafb;
-    color: #282c34;
-    padding: 5px 10px;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.15s ease;
+    
+}
+
+.tech:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+#loading-screen.fade-out {
+    opacity: 0;
+}
+
+#loading-screen p {
+    margin-top: 20px;
+    font-family: 'Victor Mono', monospace;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 2px;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+#contact button {
+    margin: 10px;
+    padding: 12px 24px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+h1 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: none;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(to right, 
+                rgba(255, 100, 50, 0.7), 
+                rgba(255, 200, 100, 1), 
+                rgba(255, 255, 255, 0.9));
+    box-shadow: 0 0 15px rgba(255, 150, 50, 0.8), 
+                0 0 8px rgba(255, 100, 0, 0.5);
+    animation: cometBurn 1s cubic-bezier(.17, .67, .83, .67) forwards 0.9s;
+}
+
+@keyframes cometBurn {
+    0% {
+        width: 0;
+        left: 0;
+        box-shadow: 0 0 20px rgba(255, 150, 50, 1), 
+                    0 0 10px rgba(255, 100, 0, 0.8);
+    }
+    100% {
+        width: 100%;
+        box-shadow: 0 0 5px rgba(255, 150, 50, 0.3), 
+                    0 0 3px rgba(255, 100, 0, 0.2);
+    }
 }
