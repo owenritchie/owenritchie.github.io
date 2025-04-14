@@ -4,27 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Owen Ritchie</title>
+    <link rel="icon" href="images/fox.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Victor+Mono:wght@400;500;600&family=Vollkorn:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="content">
-        <h1>Owen Ritchie</h1>
+        <h1 id="typing-title">Owen Ritchie</h1>
         <div class="section">
             <h2>Experience</h2>
             <ul>
-                <li>Data Analytics Intern - Poisson Consulting (2023)</li>
-                <li>Teaching Assistant - Columbia Mountains Institute of Applied Ecology (2023)</li>
+                <li>
+                    <img src="images/canada.png" alt="" class="workplace-icon">
+                    Junior Statistical Analyst - CFO Stats, Global Affairs Canada (2025-Present)
+                </li>
+                <li>
+                    <img src="images/poisson.png" alt="" class="workplace-icon">
+                    Data Analyst Intern - Poisson Consulting (2023)
+                </li>
+                <li>
+                    <img src="images/cmi.png" alt="" class="workplace-icon">
+                    Teaching Assistant - Columbia Mountains Institute of Applied Ecology (2023)
+                </li>
             </ul>
         </div>
         <div class="section">
             <h2>Education</h2>
             <ul>
-                <li>Honours Bachelor of Science with Major in Computer Science (2022-Current)</li>
+                <li>
+                    <img src="images/ottawa.png" alt="" class="workplace-icon">
+                    Honours Bachelor of Science with Major in Computer Science (2022-2026)
+                </li>
             </ul>
-        </div>
-        <div class="section">
-            <h2>Resume</h2>
-            <a id="download-resume" href="OwenRitchieResume2024.pdf" target="_blank">Download Resume</a>
         </div>
         <div class="section" id="projects">
             <h2>Personal Projects</h2>
@@ -32,10 +45,31 @@
                 <div class="grid-item">
                     <div class="project-content">
                         <div class="project-info">
+                            <h3><a href="https://beige-mistyjay-lord.toystack.dev/public/dashboard/dd5572fd-43a9-4c3f-9336-d2d028b05356?tab=4-internet-%26-connectivity" target="_blank">Digital Transformation in Sub-Saharan Africa</a></h3>
+                            <p class="project-description">End-to-End dashboard for key indicators representing Africa's digital advancement over the last decade.</p>
+                            <div class="tech-stack">
+                                <span class="tech">Python</span>
+                                <span class="tech">PostgreSQL</span>
+                                <span class="tech">Metabase</span>
+                                <span class="tech">Docker</span>
+                                <span class="tech">Neon</span>
+                                <span class="tech">Github Actions</span>
+
+                            </div>
+                        </div>
+                        <img src="images/metabase.png" alt="Digital Transformation Dashboard" class="project-image">
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="project-content">
+                        <div class="project-info">
                             <h3><a href="https://chardrop.onrender.com/" target="_blank">Real-time Chat Application Using Socket.IO</a></h3>
                             <p class="project-description">A dynamic chat platform allowing users to create rooms & exchange messages.</p>
                             <div class="tech-stack">
+                                <span class="tech">HTML & CSS</span>
                                 <span class="tech">Flask</span>
+                                <span class="tech">JavaScript</span>
                                 <span class="tech">Socket.IO</span>
                             </div>
                         </div>
@@ -43,54 +77,32 @@
                     </div>
                 </div>
                 
-                <div class="grid-item">
-                    <div class="project-content">
-                        <div class="project-info">
-                            <h3><a href="https://owenritchie1.pythonanywhere.com/" target="_blank">Oceania Seafood Consumption Model</a></h3>
-                            <p class="project-description">Created a predictive model using polynomial regression to forecast fish & seafood consumption trends in Oceania.</p>
-                            <div class="tech-stack">
-                                <span class="tech">Scikit-learn</span>
-                                <span class="tech">Matplotlib</span>
-                            </div>
-                        </div>
-                        <img src="images/oceania.png" alt="Oceania Seafood Consumption Model" class="project-image">
-                    </div>
-                </div>
-                <!--
-                <div class="grid-item">
-                    <div class="project-content">
-                        <div class="project-info">
-                            <h3><a href="https://lisztyapp.onrender.com" target="_blank">Song Recommendation App Using Spotify's Web API</a></h3>
-                            <p class="project-description">Created a web application that recommends songs based on various characteristics using Spotify's API tools.</p>
-                            <div class="tech-stack">
-                                <span class="tech">Spotify API</span>
-                                <span class="tech">JavaScript</span>
-                            </div>
-                        </div>
-                        <img src="images/liszty.png" alt="Liszty Song Recommendation Application" class="project-image">
-                    </div>
-                </div>
-                -->
-                <div class="grid-item">
-                    <div class="project-content">
-                        <div class="project-info">
-                            <h3><a href="https://github.com/owenritchie/javaMinesweeper" target="_blank">Minesweeper In Java Swing</a></h3>
-                            <p class="project-description">Recreated the popular game Minesweeper using Java's Swing GUI toolkit. </p>
-                            <div class="tech-stack">
-                                <span class="tech">Java Swing</span>
-                                <span class="tech">OOP</span>
-                            </div>
-                        </div>
-                        <img src="images/minesweeper.png" alt="Minesweeper Game" class="project-image">
-                    </div>
-                </div>
                 
             </div>
         </div>
         <div class="section" id="contact">
             <h2>Get in Touch!</h2>
-            <button onclick="window.location.href='mailto:owenritchie04@gmail.com'">Send Email</button>
+            <button onclick="window.location.href='mailto:owenritchie04@gmail.com'">Email</button>
+            <button onclick="window.location.href='resume.pdf'">Resume</button>
+            <button onclick="window.location.href='https://github.com/owenritchie'">Github</button>
+            <button onclick="window.location.href='https://linkedin.com/in/owenritchie2004/'">LinkedIn</button>        
         </div>
     </div>
 </body>
+<div id="loading-screen">
+    <div class="loader"></div>
+    <p>Loading...</p>
+</div>
+<script>
+    //Loading Effect    
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.classList.add('fade-out');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }, 800);
+    });
+</script>
 </html>
