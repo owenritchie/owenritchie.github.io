@@ -11,9 +11,9 @@ function AutoScrollImages({ images, direction = "left" }: AutoScrollImagesProps)
   return (
     <div className="scroll-container">
       <div className={`scroll-track ${direction === "right" ? "reverse" : ""}`}>
-        {images.map((src, i) => <img key={i} src={src} alt="" loading="lazy" />)}
-        {images.map((src, i) => <img key={`d${i}`} src={src} alt="" loading="lazy" />)}
-        {images.map((src, i) => <img key={`e${i}`} src={src} alt="" loading="lazy" />)}
+        {images.map((src, i) => <img key={i} src={src} alt="" loading="eager" />)}
+        {images.map((src, i) => <img key={`d${i}`} src={src} alt="" loading="eager" />)}
+        {images.map((src, i) => <img key={`e${i}`} src={src} alt="" loading="eager" />)}
       </div>
     </div>
   );

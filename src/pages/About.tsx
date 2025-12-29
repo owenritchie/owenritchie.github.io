@@ -45,7 +45,7 @@ function About() {
       <div className="about-dashboard">
         <div className="about-row-top">
           <div className="about-box profile-photo-box">
-            <img src="/me/owen.jpg" alt="Owen" className="profile-photo" />
+            <img src="/me/owen.jpg" alt="Owen" className="profile-photo" fetchPriority="high" />
           </div>
           <div className="about-box tech-stack-box">
             <h3 className="box-title">My Stack</h3>
