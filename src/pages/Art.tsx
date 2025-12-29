@@ -49,7 +49,7 @@ function Art() {
                   className="photo"
                   onClick={() => setViewing(photo)}
                 >
-                  <img src={photo} alt={`${selected} ${i + 1}`} />
+                  <img src={photo} alt={`${selected} ${i + 1}`} loading="lazy" />
                 </div>
               ))}
           </div>

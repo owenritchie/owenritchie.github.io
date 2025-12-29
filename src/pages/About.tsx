@@ -4,6 +4,30 @@ import AutoScrollImages from "../components/global/AutoScrollImages";
 import SimpleTag from "../components/global/SimpleTag";
 import { useEffect, useState } from "react";
 
+const stackSmall = [
+  "/stack/stack-small/bigquery.png",
+  "/stack/stack-small/claude.png",
+  "/stack/stack-small/databricks.png",
+  "/stack/stack-small/docker.png",
+  "/stack/stack-small/grafana.png",
+  "/stack/stack-small/java.png",
+  "/stack/stack-small/powerbi.png",
+  "/stack/stack-small/react.png",
+  "/stack/stack-small/snowflake.png",
+  "/stack/stack-small/streamlit.png",
+  "/stack/stack-small/tidyverse.png",
+];
+
+const stackLarge = [
+  "/stack/stack-large/datadog.png",
+  "/stack/stack-large/dbt.png",
+  "/stack/stack-large/looker.png",
+  "/stack/stack-large/metabase.png",
+  "/stack/stack-large/neon.png",
+  "/stack/stack-large/pandas.png",
+  "/stack/stack-large/scikit.png",
+];
+
 function About() {
   const [aboutMeData, setAboutMeData] = useState<{
     paragraphs: { text: string }[];
@@ -28,13 +52,13 @@ function About() {
             <div className="scroll-container">
               <div className="scroll-wrapper">
                 <AutoScrollImages
-                  directory="/stack/stack-small"
+                  images={stackSmall}
                   direction="left"
                 />
               </div>
               <div className="scroll-wrapper">
                 <AutoScrollImages
-                  directory="/stack/stack-large"
+                  images={stackLarge}
                   direction="right"
                 />
               </div>
