@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
+
+@font-face {
+  font-family: "Myflora";
+  src: url("/fonts/Myflora.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* Main Colours */
+  --color-bg: #faf8f3;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f5f3ee;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-accent: #f33924;
+  --color-accent-hover: rgb(177, 77, 44);
+  --color-border: #e8e5df;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+
+  /* Typography */
+  --font-display: "Righteous", cursive;
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-body: "Courier Prime", "Courier New", monospace;
+  --font-hero: "Myflora", cursive;
+
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}

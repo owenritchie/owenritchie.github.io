@@ -1,0 +1,46 @@
+.site-header {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: transparent;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-button {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav-button:hover {
+  color: var(--color-accent);
+}
+
+.nav-button.active {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .nav-buttons {
+    gap: 1rem;
+  }
+
+  .nav-button {
+    font-size: 0.875rem;
+  }
+}
