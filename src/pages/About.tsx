@@ -7,8 +7,6 @@ import { useEffect, useState } from "react";
 const stackSmall = [
   "/stack/stack-small/bigquery.png",
   "/stack/stack-small/claude.png",
-  "/stack/stack-small/databricks.png",
-  "/stack/stack-small/docker.png",
   "/stack/stack-small/grafana.png",
   "/stack/stack-small/java.png",
   "/stack/stack-small/powerbi.png",
@@ -45,22 +43,21 @@ function About() {
       <div className="about-dashboard">
         <div className="about-row-top">
           <div className="about-box profile-photo-box">
-            <img src="/me/owen.jpg" alt="Owen" className="profile-photo" fetchPriority="high" />
+            <img
+              src="/me/owen.jpg"
+              alt="Owen"
+              className="profile-photo"
+              fetchPriority="high"
+            />
           </div>
           <div className="about-box tech-stack-box">
             <h3 className="box-title">My Stack</h3>
             <div className="scroll-container">
               <div className="scroll-wrapper">
-                <AutoScrollImages
-                  images={stackSmall}
-                  direction="left"
-                />
+                <AutoScrollImages images={stackSmall} direction="left" />
               </div>
               <div className="scroll-wrapper">
-                <AutoScrollImages
-                  images={stackLarge}
-                  direction="right"
-                />
+                <AutoScrollImages images={stackLarge} direction="right" />
               </div>
             </div>
           </div>
@@ -87,7 +84,8 @@ function About() {
                 <SimpleTag text="120mm Film" />
                 <SimpleTag text="Cool Frogs" />
                 <SimpleTag text="Browsing Dribble" />
-                <SimpleTag text="Central American History" />
+                <SimpleTag text="Maps" />
+                <SimpleTag text="ML Applications" />
               </div>
             </div>
             <div className="about-box companies-box">

@@ -156,7 +156,7 @@
 }
 
 .companies-logos img {
-  max-height: 2.7rem;
+  max-height: 4rem;
   max-width: 100%;
 }
 
@@ -187,5 +187,10 @@
     font-size: 2.5rem;
     text-align: center;
     margin: 1rem;
+  }
+
+  .companies-logos img {
+    max-height: 2.7rem;
+    max-width: 100%;
   }
 }
